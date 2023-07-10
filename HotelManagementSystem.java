@@ -52,4 +52,18 @@ public class HotelManagementSystem {
         }
         return false;
     }
+
+    public Room getRoomByNumber(int roomNumber) {
+        for (Room room : rooms) {
+            if (room.getNumber() == roomNumber) {
+                return room;
+            }
+            // Logica para recuperar el numero de la habitacion y ver si esta disponible en
+            // archivo administrador
+        }
+        {
+            return null;
+        }
+    }
+
 }
