@@ -7,6 +7,7 @@ public abstract class Room {
         this.number = number;
         this.type = type;
         this.status = "Available";
+
     }
 
     public int getNumber() {

@@ -50,11 +50,10 @@ public class Administrator {
             System.out.println("1. Agregar reserva");
             System.out.println("2. Mostrar habitaciones ocupadas");
             System.out.println("3. Mostrar habitaciones disponibles");
-            System.out.println("4. Cantidad de guests");
+            System.out.println("4. Cantidad de Invitados");
             System.out.println("0. Salir");
             System.out.print("Ingrese su elección: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea después de la entrada
 
             switch (choice) {
                 case 1:
@@ -89,10 +88,13 @@ class HotelAdministrator {
     public boolean login() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--- Inicio de Sesión del Administrador ---");
+
         System.out.print("Ingrese el nombre de usuario: ");
         String username = scanner.nextLine();
+
         System.out.print("Ingrese la contraseña: ");
         String password = scanner.nextLine();
+
         scanner.close();
 
         // Verificar las credenciales
@@ -188,6 +190,7 @@ class HotelAdministrator {
     // Metodo de autenticacion
     private boolean authenticate(String username, String password) {
         // implementar logica con exceptions
-        return username.equals("admin") && password.equals("password");
+        return username.equals("admin") && password.equals("password"); // admin y password son las credenciales por
+                                                                        // defecto
     }
 }
